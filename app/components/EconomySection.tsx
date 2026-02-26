@@ -82,7 +82,7 @@ export default function EconomySection() {
                 <YAxis tick={{ fontSize: 11, fill: "#94A3B8" }} domain={[0, 12]} />
                 <Tooltip
                   contentStyle={{ borderRadius: "12px", border: "1px solid #E2E8F0", fontSize: 12 }}
-                  formatter={(v: number) => [`${v}%`, "GRDP"]}
+                  formatter={(value) => [`${value ?? ""}%`, "GRDP"]}
                 />
                 <Area
                   type="monotone"
@@ -112,7 +112,7 @@ export default function EconomySection() {
                 <YAxis tick={{ fontSize: 11, fill: "#94A3B8" }} />
                 <Tooltip
                   contentStyle={{ borderRadius: "12px", border: "1px solid #E2E8F0", fontSize: 12 }}
-                  formatter={(v: number) => [`${v}K`, "Dân số"]}
+                  formatter={(value) => [`${value ?? ""}K`, "Dân số"]}
                 />
                 <Bar dataKey="pop" fill="#3B82F6" radius={[6, 6, 0, 0]} />
               </BarChart>
@@ -140,7 +140,7 @@ export default function EconomySection() {
                   </Pie>
                   <Tooltip
                     contentStyle={{ borderRadius: "12px", border: "1px solid #E2E8F0", fontSize: 12 }}
-                    formatter={(v: number) => [`${v}%`]}
+                    formatter={(value) => [`${value ?? ""}%`]}
                   />
                 </PieChart>
               </ResponsiveContainer>
